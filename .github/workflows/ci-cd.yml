@@ -6,9 +6,9 @@ name: Mac Auto Topgrade CI/CD
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master, dev ]
   pull_request:
-    branches: [ main ]
+    branches: [ master, dev ]
 
 jobs:
   test-and-lint:
@@ -40,7 +40,7 @@ jobs:
 
   release:
     needs: test-and-lint
-    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    if: github.ref == 'refs/heads/master' && github.event_name == 'push'
     runs-on: macos-latest
     steps:
       - name: Checkout Repository

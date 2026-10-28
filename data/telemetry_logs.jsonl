@@ -1,3 +1,7 @@
 {"appId": "mac-auto-topgrade", "eventType": "OFFLINE_EVENT", "status": "WARNING", "timestamp": "2026-10-28T19:43:22.959714+00:00", "unixTimestamp": 1793216602, "details": {"state": "disconnected"}}
 {"appId": "mac-auto-topgrade", "eventType": "TEST_EVENT", "status": "INFO", "timestamp": "2026-10-28T19:43:22.960287+00:00", "unixTimestamp": 1793216602, "details": {"testKey": "testValue", "count": 42}}
 {"appId": "mac-auto-topgrade", "eventType": "TOPGRADE_STARTED", "status": "INFO", "timestamp": "2026-10-28T19:44:22.792130+00:00", "unixTimestamp": 1793216662, "details": {"binary": "/opt/homebrew/bin/topgrade", "args": ["--yes", "--no-ask-retry", "--cleanup", "--disable", "system"], "dryRun": false, "startedAt": "2026-10-28T19:44:21.973652+00:00"}}
+{"appId": "mac-auto-topgrade", "eventType": "OFFLINE_EVENT", "status": "WARNING", "timestamp": "2026-10-28T19:45:15.503534+00:00", "unixTimestamp": 1793216715, "details": {"state": "disconnected"}}
+{"appId": "mac-auto-topgrade", "eventType": "TEST_EVENT", "status": "INFO", "timestamp": "2026-10-28T19:45:15.503916+00:00", "unixTimestamp": 1793216715, "details": {"testKey": "testValue", "count": 42}}
+{"appId": "mac-auto-topgrade", "eventType": "OFFLINE_EVENT", "status": "WARNING", "timestamp": "2026-10-28T19:48:15.023482+00:00", "unixTimestamp": 1793216895, "details": {"state": "disconnected"}}
+{"appId": "mac-auto-topgrade", "eventType": "TEST_EVENT", "status": "INFO", "timestamp": "2026-10-28T19:48:15.023865+00:00", "unixTimestamp": 1793216895, "details": {"testKey": "testValue", "count": 42}}
