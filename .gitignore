@@ -22,3 +22,12 @@ data/runtime/
 .env
 .env.local
 *.secret
+
+# Internal AI context & prompt files
+AGENTS.md
+CLAUDE.md
+WORKLOG.md
+.cursorrules
+.clinerules
+*.agent.md
+
