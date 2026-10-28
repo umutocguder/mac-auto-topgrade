@@ -1,0 +1,9 @@
+[
+  {
+    "timestamp": "2026-10-28T20:00:00Z",
+    "durationSeconds": 12.5,
+    "exitCode": 0,
+    "status": "SUCCESS",
+    "dryRun": true
+  }
+]

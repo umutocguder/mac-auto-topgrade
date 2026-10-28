@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Created by 11Hopem -->
+<!-- Copyright (c) 2026 11Hopem. All rights reserved. -->
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.11hopem.mac-auto-topgrade</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>/Users/umut/mycodespaces/mac-auto-topgrade/scripts/run_updater.sh</string>
+    </array>
+
+    <!-- Execute automatically whenever macOS starts and the user logs in -->
+    <key>RunAtLoad</key>
+    <true/>
+
+    <key>WorkingDirectory</key>
+    <string>/Users/umut/mycodespaces/mac-auto-topgrade</string>
+
+    <key>StandardOutPath</key>
+    <string>/Users/umut/Library/Logs/mac-auto-topgrade/launchd_stdout.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>/Users/umut/Library/Logs/mac-auto-topgrade/launchd_stderr.log</string>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+        <key>HOME</key>
+        <string>/Users/umut</string>
+        <key>LANG</key>
+        <string>en_US.UTF-8</string>
+    </dict>
+
+    <key>ProcessType</key>
+    <string>Background</string>
+
+    <key>Nice</key>
+    <integer>10</integer>
+</dict>
+</plist>

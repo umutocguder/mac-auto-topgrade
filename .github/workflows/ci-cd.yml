@@ -1,0 +1,65 @@
+# Created by 11Hopem
+# Copyright (c) 2026 11Hopem. All rights reserved.
+# Licensed under 11Hopem Proprietary License.
+
+name: Mac Auto Topgrade CI/CD
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test-and-lint:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run Code Style & Syntax Verification
+        run: |
+          python -m py_compile src/*.py scripts/*.py tests/*.py
+
+      - name: Execute Automated Unit Tests
+        run: |
+          python -m unittest discover -s tests -p "test_*.py" -v
+
+      - name: Verify LaunchAgent Plist Syntax
+        run: |
+          plutil -lint com.11hopem.mac-auto-topgrade.plist
+
+      - name: Test Backup Integrity Engine
+        run: |
+          python scripts/backup.py
+
+  release:
+    needs: test-and-lint
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    runs-on: macos-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Bump Version and Tag
+        id: tag_version
+        uses: anothrNick/github-tag-action@1.71.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          WITH_V: true
+          DEFAULT_BUMP: patch
+
+      - name: Create GitHub Release Package
+        uses: softprops/action-gh-release@v2
+        if: steps.tag_version.outputs.new_tag
+        with:
+          tag_name: ${{ steps.tag_version.outputs.new_tag }}
+          name: Release ${{ steps.tag_version.outputs.new_tag }}
+          generate_release_notes: true
+          files: |
+            com.11hopem.mac-auto-topgrade.plist
