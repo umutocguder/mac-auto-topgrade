@@ -5,3 +5,4 @@
 {"appId": "mac-auto-topgrade", "eventType": "TEST_EVENT", "status": "INFO", "timestamp": "2026-10-28T19:45:15.503916+00:00", "unixTimestamp": 1793216715, "details": {"testKey": "testValue", "count": 42}}
 {"appId": "mac-auto-topgrade", "eventType": "OFFLINE_EVENT", "status": "WARNING", "timestamp": "2026-10-28T19:48:15.023482+00:00", "unixTimestamp": 1793216895, "details": {"state": "disconnected"}}
 {"appId": "mac-auto-topgrade", "eventType": "TEST_EVENT", "status": "INFO", "timestamp": "2026-10-28T19:48:15.023865+00:00", "unixTimestamp": 1793216895, "details": {"testKey": "testValue", "count": 42}}
+{"appId": "mac-auto-topgrade", "eventType": "TOPGRADE_ERROR", "status": "ERROR", "timestamp": "2026-10-28T20:14:24.734109+00:00", "unixTimestamp": 1793218464, "details": {"durationSeconds": 1802.75, "exitCode": 124, "dryRun": false}}

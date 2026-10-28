@@ -1,5 +1,14 @@
 [
   {
+    "timestamp": "2026-10-28T19:44:21.973652+00:00",
+    "durationSeconds": 1802.75,
+    "exitCode": 124,
+    "status": "ERROR",
+    "dryRun": false,
+    "stdoutTail": "",
+    "stderrTail": "Execution timed out after 30 minutes."
+  },
+  {
     "timestamp": "2026-10-28T20:00:00Z",
     "durationSeconds": 12.5,
     "exitCode": 0,
