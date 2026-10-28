@@ -2,15 +2,42 @@
 # Copyright (c) 2026 11Hopem. All rights reserved.
 # Licensed under 11Hopem Proprietary License.
 
+# ==========================================
+# 11Hopem Security, Credentials & Secrets Shield (Rule 12)
+# ==========================================
+.env
+.env.*
+!.env.example
+!.env.sample
+*.pem
+*.key
+*.cert
+*.crt
+*.p12
+*.p8
+*.pkcs12
+*credentials*.json
+*service-account*.json
+secrets.json
+secrets.plist
+*.keystore
+id_rsa*
+id_ed25519*
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
+.pytest_cache/
 
 # macOS system files
 .DS_Store
+.DS_Store?
+._*
 .AppleDouble
 .LSOverride
+.Spotlight-V100
+.Trashes
 
 # Logs and runtime artifacts
 logs/
@@ -18,16 +45,10 @@ logs/
 data/backups/
 data/runtime/
 
-# Environment and credentials
-.env
-.env.local
-*.secret
-
-# Internal AI context & prompt files
+# Internal AI context & prompt files (Safety Shield)
 AGENTS.md
 CLAUDE.md
 WORKLOG.md
 .cursorrules
 .clinerules
 *.agent.md
-
