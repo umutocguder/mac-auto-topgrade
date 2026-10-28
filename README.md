@@ -47,9 +47,10 @@ Whenever macOS boots up or the user logs into their desktop session, the system'
 
 ## 3. Core Capabilities & Modules
 
-1. **Autonomous Boot Trigger (`com.11hopem.mac-auto-topgrade.plist`):**
-   - Implements native Apple `launchd` configuration with `<key>RunAtLoad</key><true/>`.
-   - Executes with background priority (`Nice: 10`, `ProcessType: Background`) preventing CPU throttle during boot.
+1. **Autonomous Boot & Daily Schedule Triggers (`com.11hopem.mac-auto-topgrade.plist`):**
+   - Implements native Apple `launchd` configuration with `<key>RunAtLoad</key><true/>` for boot/login execution.
+   - Implements `<key>StartCalendarInterval</key>` triggering daily maintenance at 10:00 AM (runs upon wake if the system was asleep).
+   - Executes with background priority (`Nice: 10`, `ProcessType: Background`) preventing CPU throttle.
 2. **Hardened Package Safety Engine (`src/updater.py`):**
    - Automatically resolves binary paths across Homebrew defaults (`/opt/homebrew/bin/topgrade`, `/usr/local/bin/topgrade`).
    - Runs with `--yes --no-ask-retry --cleanup --disable system` flags.

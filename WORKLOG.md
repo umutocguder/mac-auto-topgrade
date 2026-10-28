@@ -31,3 +31,16 @@
   - LaunchAgent installed and loaded into macOS user session via `launchctl`.
 - **Next Steps**:
   - Verify first automated run upon next system boot / user login.
+
+### [2026-10-29 01:06] Daily Scheduling, Live Log Streaming & Cooldown Safeguard Implementation
+- **Task & Purpose**: Added daily recurring schedule capability and live line-by-line log streaming to guarantee unattended daily maintenance.
+- **Architectural & Technical Decisions**:
+  - Added `<key>StartCalendarInterval</key>` at 10:00 AM in `com.11hopem.mac-auto-topgrade.plist` so that the updater runs every single day even if the machine is not rebooted (macOS launchd fires upon wake if asleep).
+  - Implemented real-time line-by-line subprocess output streaming (`subprocess.Popen` with `sys.stdout.flush()`) in `src/updater.py` so that `runner.log` shows immediate progress during toolchain updates.
+  - Added 2-hour cooldown safeguard (`is_recent_successful_run`) to prevent duplicate consecutive executions when reboot occurs near the scheduled daily interval.
+  - Extended execution timeout to 90 minutes (5400s) to comfortably accommodate large language models (Ollama) and package builds.
+  - Reinstalled and reloaded LaunchAgent in user `launchctl` session.
+- **Verification & Current Status**:
+  - 11/11 automated unit tests passed.
+  - Plist verified with `plutil -lint`: Valid.
+  - LaunchAgent active and running live in background with real-time log streaming verified.

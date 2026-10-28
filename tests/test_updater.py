@@ -13,7 +13,8 @@ from unittest.mock import patch, MagicMock
 from src.updater import (
     resolve_topgrade_binary,
     build_topgrade_arguments,
-    record_run_history
+    record_run_history,
+    is_recent_successful_run
 )
 
 
@@ -48,6 +49,11 @@ class TestUpdaterModule(unittest.TestCase):
         }
         # Should not raise exception
         record_run_history(sample_run)
+
+    def test_is_recent_successful_run(self):
+        # Should execute safely and return a boolean
+        result = is_recent_successful_run(cooldown_seconds=10)
+        self.assertIsInstance(result, bool)
 
 
 if __name__ == "__main__":
