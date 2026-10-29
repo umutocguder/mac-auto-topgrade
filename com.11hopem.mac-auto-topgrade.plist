@@ -17,15 +17,6 @@
     <key>RunAtLoad</key>
     <true/>
 
-    <!-- Execute automatically every day at 10:00 AM (runs on wake if system was asleep) -->
-    <key>StartCalendarInterval</key>
-    <dict>
-        <key>Hour</key>
-        <integer>10</integer>
-        <key>Minute</key>
-        <integer>0</integer>
-    </dict>
-
     <key>WorkingDirectory</key>
     <string>/Users/umut/mycodespaces/mac-auto-topgrade</string>
 

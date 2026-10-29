@@ -1,5 +1,23 @@
 [
   {
+    "timestamp": "2026-10-29T08:12:50.070744+00:00",
+    "durationSeconds": 625.53,
+    "exitCode": 1,
+    "status": "ERROR",
+    "dryRun": false,
+    "stdoutTail": "emini-cli--0.65.0... (21.5MB)\nRemoving: /Users/umut/Library/Caches/Homebrew/gemini-cli_bottle_manifest--0.65.0... (180.4KB)\nRemoving: /Users/umut/Library/Caches/Homebrew/node--26.12.1_1... (21.3MB)\nRemoving: /Users/umut/Library/Caches/Homebrew/node_bottle_manifest--26.12.1_1... (146.1KB)\nDisable this behaviour by setting `HOMEBREW_NO_INSTALL_CLEANUP=1`.\nHide these hints with `HOMEBREW_NO_ENV_HINTS=1` (see `man brew`).\n==> Caveats\nzsh completions have been installed to:\n  /opt/homebrew/share/zsh/site-functions\n==> Upgraded 3 outdated packages\nact         0.2.90    -> 0.2.92\nnode        26.12.1_1 -> 26.13.0\ngemini-cli  0.65.0    -> 0.66.0\n==> 1 Deprecated or disabled package\ngemini-cli (deprecated)\n―― 11:22:51 - Brew - Cask ――\n―― 11:23:13 - Summary ――\nMicrosoft Office: OK\nVisual Studio Code extensions: OK\nnpm: OK\nyarn: OK\npnpm: FAILED\nGitHub CLI Extensions: OK\nGitHub CLI Skills: OK\nGit Repositories: OK\nClaude Code: OK\nClaude Code Plugins: OK\nOllama: OK\nBrew (ARM): OK\nBrew Cask (ARM): OK\n",
+    "stderrTail": ""
+  },
+  {
+    "timestamp": "2026-10-28T22:06:48.787829+00:00",
+    "durationSeconds": 332.82,
+    "exitCode": 1,
+    "status": "ERROR",
+    "dryRun": false,
+    "stdoutTail": "589680f... (1,131 files, 11.4MB)\nPruned 6 symbolic links from /opt/homebrew\nRemoving: /opt/homebrew/Library/Homebrew/vendor/portable-ruby/3.4.8... (1,584 files, 35.6MB)\nRemoving: /opt/homebrew/Library/Homebrew/vendor/portable-ruby/4.0.1... (1,641 files, 34.2MB)\nRemoving: /opt/homebrew/Library/Homebrew/vendor/portable-ruby/4.0.2_1... (1,705 files, 34.6MB)\nRemoving: /opt/homebrew/Library/Homebrew/vendor/portable-ruby/4.0.4... (1,707 files, 34.6MB)\nRemoving: /opt/homebrew/Library/Homebrew/vendor/portable-ruby/4.0.5_1... (1,707 files, 34.6MB)\nRemoving: /opt/homebrew/Library/Homebrew/vendor/portable-ruby/4.0.7_1... (1,707 files, 34.6MB)\n==> This operation has freed approximately 696.8MB of disk space.\n―― 01:11:53 - Brew - Cask ――\n―― 01:12:19 - Summary ――\nMicrosoft Office: OK\nVisual Studio Code extensions: OK\nnpm: OK\nyarn: OK\npnpm: FAILED\nGitHub CLI Extensions: OK\nGitHub CLI Skills: OK\nGit Repositories: OK\nClaude Code: OK\nClaude Code Plugins: OK\nOllama: OK\nBrew (ARM): OK\nBrew Cask (ARM): OK\n",
+    "stderrTail": ""
+  },
+  {
     "timestamp": "2026-10-28T20:00:00Z",
     "durationSeconds": 12.5,
     "exitCode": 0,
